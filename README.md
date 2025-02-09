@@ -2,9 +2,9 @@
 自动对话功能，多钱包、多代理，随机延时请求
 登录：https://testnet.gokite.ai?r=zxjXFFzQ
 ## 🌟 功能
-原脚本bug：串行执行阻塞
-由于 startContinuousProcess 函数内部包含一个 无限循环（while (isRunning)），  
-脚本会卡在第一个钱包的处理流程中，永远不会进入后续钱包。
+### 原脚本bug：串行执行阻塞  
+由于 startContinuousProcess 函数内部包含一个 无限循环（while (isRunning)）   
+脚本会卡在第一个钱包的处理流程中，永远不会进入后续钱包。  
 1. 修改主程逻辑：
    a. 原程序主程只执行一个钱包,现所有钱包都会轮询
    b. 增加机器人请求随机次数模拟，保证所有钱包执行次数不同  
