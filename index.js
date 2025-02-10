@@ -201,7 +201,7 @@ async function reportUsage(wallet, options, retryCount = 0) {
     
     if (isRateLimit && retryCount < rateLimitConfig.maxRetries) {
       const delay = calculateDelay(retryCount);
-      const randomWaitTime = Math.floor(Math.random() * (13000 - 8000 + 1)) + 8000;
+      const randomWaitTime = Math.floor(Math.random() * (13000 - 8000 + 1)) + 1000;
       console.log(chalk.yellow(`⏳ 检测到速率限制，${randomWaitTime/1000} 秒后重试...`));
       await sleep(delay);
       return reportUsage(wallet, options, retryCount + 1);
@@ -282,7 +282,7 @@ async function processWallet(wallet, walletIndex, useProxy) {
       successCount += increment;
 
       if (isRunning && successCount < targetSuccess) {
-        const randomWaitTime = Math.floor(Math.random() * (13000 - 8000 + 1)) + 8000;
+        const randomWaitTime = Math.floor(Math.random() * (13000 - 8000 + 1)) + 1000;
         console.log(chalk.yellow(`⏳ 等待 ${randomWaitTime/1000} 秒后进行下一次交互...`));
         await sleep(randomWaitTime);
       }
