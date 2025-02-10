@@ -42,14 +42,14 @@ npm install
 3. 替换钱包和代理（不用代理也行）
 
 ``` 
-bash钱包地址（是地址不是私钥）：0x 
+钱包地址（是地址不是私钥）：0x 
 ```
 
 ```bash
 代理地址文件：proxies.txt：格式http://username:password:ip:port  
 ```
 4. 运行
-
+在此之前提示一下，question.txt文件里面的问题放的太多，会导致启动变慢，启动前请删掉三分之二。
 ```bash
 npm run start
 ```
