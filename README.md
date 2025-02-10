@@ -46,7 +46,7 @@ npm install
 ```
 
 ```bash
-代理地址文件：proxies.txt：格式http://username:password:ip:port  
+代理地址文件：proxies.txt：格式http://username:password:ip:port  or socks5://user:pass@host:port 后者更快  
 ```
 4. 运行  
 ```bash
