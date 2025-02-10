@@ -48,8 +48,7 @@ npm install
 ```bash
 代理地址文件：proxies.txt：格式http://username:password:ip:port  
 ```
-4. 运行
-在此之前提示一下，question.txt文件里面的问题放的太多，会导致启动变慢，启动前请删掉三分之二。
+4. 运行  
 ```bash
 npm run start
 ```
