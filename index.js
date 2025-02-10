@@ -22,8 +22,8 @@ const readline = createInterface({
 
 // 配置项
 const walletConfig = {
-  minSuccessCount: 25,
-  maxSuccessCount: 30
+  minSuccessCount: 20,
+  maxSuccessCount: 22
 };
 
 const rateLimitConfig = {
@@ -31,7 +31,7 @@ const rateLimitConfig = {
   baseDelay: 10000,
   maxDelay: 30000,
   requestsPerMinute: 4,
-  intervalBetweenCycles: 60000,
+  intervalBetweenCycles: 20000,
   walletVerificationRetries: 3
 };
 
