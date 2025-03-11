@@ -4,6 +4,7 @@ import fs from 'fs/promises';
 import { banner } from './banner.js';
 import SocksProxyAgent from 'socks-proxy-agent';
 import HttpsProxyAgent from 'https-proxy-agent';
+import cron from 'node-cron';
 
 // 等待用户按键
 const 等待按键 = async () => {
@@ -423,7 +424,10 @@ process.on('unhandledRejection', (错误) => {
     console.error(`\n${chalk.red('❌ 未处理的异常:')} ${错误.message}`);
 });
 
-主程序().catch(错误 => {
+cron.schedule('0 12 * * *', () => {
+  console.log('开始执行kite ai主程序...');
+  主程序().catch(错误 => {
     console.error(`\n${chalk.red('❌ 致命错误:')} ${错误.message}`);
     process.exit(1);
+  });
 });
