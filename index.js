@@ -384,17 +384,17 @@ async function 主程序() {
     console.log(`${chalk.yellow('汉化作者：https://github.com/121panda121/Kile_Ai_Bot')}\n`);
     console.log(`${chalk.yellow('原作者：https://github.com/airdropinsiders/KiteAi-Auto-Bot')}\n`);
     console.log(chalk.magenta('按任意键继续...'));
-    await 等待按键();
+    // await 等待按键();
     console.clear();
     console.log(banner);
     
     const 钱包列表 = await 加载钱包();
     const 代理列表 = await 加载代理();
 
-    if (钱包列表.length !== 代理列表.length) {
-        console.log(`${chalk.red('[错误]')} 钱包数量 (${钱包列表.length}) 与代理数量 (${代理列表.length}) 不匹配`);
-        process.exit(1);
-    }
+    // if (钱包列表.length !== 代理列表.length) {
+    //     console.log(`${chalk.red('[错误]')} 钱包数量 (${钱包列表.length}) 与代理数量 (${代理列表.length}) 不匹配`);
+    //     process.exit(1);
+    // }
 
     console.log(`${chalk.cyan('📊 已加载:')} ${chalk.green(钱包列表.length)} 个钱包 ${chalk.green(代理列表.length)} 个代理\n`);
     
