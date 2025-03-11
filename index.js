@@ -424,6 +424,11 @@ process.on('unhandledRejection', (错误) => {
     console.error(`\n${chalk.red('❌ 未处理的异常:')} ${错误.message}`);
 });
 
+主程序().catch(错误 => {
+    console.error(`\n${chalk.red('❌ 致命错误:')} ${错误.message}`);
+    process.exit(1);
+  });
+
 cron.schedule('0 12 * * *', () => {
   console.log('开始执行kite ai主程序...');
   主程序().catch(错误 => {
